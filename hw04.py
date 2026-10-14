@@ -10,9 +10,18 @@ secret_word = "food"
 # Task 1
 def check_text():
     """ Add your docstring """
-    pass
-
-
+#Create a while loop that requires one of the two conditions
+user_in = input("Give me a sentence: ")
+while True: 
+    if "dog" in user_in or "Dog" in user_in:
+        print("You used the word \"dog\" or the word \"Dog\"!")
+        break
+    elif secret_word in user_in:
+        print("You used the secret word!")
+        break
+    else:
+        print("Try again")
+        user_in = input("Give me a sentence: ")
 
 # Task 2
 def check_greater():
