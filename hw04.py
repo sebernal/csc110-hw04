@@ -1,5 +1,5 @@
 # ------------------------------------------------------
-#        Name: (put your name here)
+#        Name: (Sophia Bernal)
 #       Peers: (add any collaborators)
 #  References: (anything you checked to solve this)
 # ------------------------------------------------------
@@ -10,30 +10,47 @@ secret_word = "food"
 # Task 1
 def check_text():
     """ Add your docstring """
-#Create a while loop that requires one of the two conditions
-user_in = input("Give me a sentence: ")
-while True: 
-    if "dog" in user_in or "Dog" in user_in:
-        print("You used the word \"dog\" or the word \"Dog\"!")
-        break
-    elif secret_word in user_in:
-        print("You used the secret word!")
-        break
-    else:
-        print("Try again")
-        user_in = input("Give me a sentence: ")
+#collecting input from user
+    user_in = input("Give me a sentence: ")
+#Force starting a while loop
+    while True:
+#Checking first condition, if input includes dog or Dog 
+        if "dog" in user_in or "Dog" in user_in:
+            print("You used the word \"dog\" or the word \"Dog\"!")
+#If user input satisfies this condition end loop
+            break
+#If first condition not met check for second condition 
+        elif secret_word in user_in:
+            print("You used the secret word!")
+#If secret word condition met end loop
+            break
+#If neither conditions are met continue the loop
+        else:
+            print("Try again")
+            user_in = input("Give me a sentence: ")
 
 # Task 2
 def check_greater():
     """ Add your docstring """
-    pass
-
+#Get two numbers from user
+    a = input("Give me a first integer: ")
+    b = input("Give me a second integer: ")
+#Use a while loop to continue getting input until numbers are not equal
+    while a==b:
+        print("Try again")
+        a = input("Give me a first integer: ")
+        b = input("Give me a second integer: ")
+#Check if the first value is greater
+    if a>b:
+        print("First is Greater")
+#Check if the second value is greater
+    elif b>a:
+        print("Second is Greater")
 
 
 # Task 3
 def get_special_numbers():
     """ Add your docstring """
-    pass
 
 
 # Task 4.a
