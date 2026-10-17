@@ -9,7 +9,7 @@ secret_word = "food"
 
 # Task 1
 def check_text():
-    """ Add your docstring """
+    """ This function recieves a string from the user and checks if it contains dog, Dog, or the secret word"""
 #collecting input from user
     user_in = input("Give me a sentence: ")
 #Force starting a while loop
@@ -31,7 +31,7 @@ def check_text():
 
 # Task 2
 def check_greater():
-    """ Add your docstring """
+    """ recieves two inputs and determines which number is greater """
 #Get two numbers from user
     a = input("Give me a first integer: ")
     b = input("Give me a second integer: ")
@@ -50,7 +50,7 @@ def check_greater():
 
 # Task 3
 def get_special_numbers():
-    """ Add your docstring """
+    """ prints the numbers in specified range that meet all conditions"""
 #Use a for loop that checks each number between 1 and 41
     for num in range(1,41):
 #Check that the number is odd
@@ -64,17 +64,23 @@ def get_special_numbers():
 
 # Task 4.a
 def my_for_loop():
-    """ Add your docstring """
+    """takes string from user and determines whether each variable is a vowel or consonant"""
+#Get input from user
     user_str = input("Give me a string: ")
+#find length of the string
     length = len(user_str)
+#Check that the string length is between 2 and 5 and that there is no space
     if not 2<=length<=5 or " " in user_str:
         print("bad word")
         return
     else:
+#use enumerate to assign an index to each element in the string
         for i,ch in enumerate(user_str):
-            letter = ch   
+            letter = ch
+#check if the letter is a vowel
             if letter in "aeiou" or letter in "AEIOU":  
                 print(f"letter {letter} is a vowel")
+#If the letter is not a vowel print that it is a consonant 
             else:
                  print(f"letter {letter} is a consonant")
 
@@ -83,16 +89,22 @@ def my_for_loop():
 
 # Task 4.b
 def my_while_loop():
-    """ Add your docstring """
+    """ User input determines whether the loop is continued or exited and what is printed """
+#Start the loop
     while True :
+#get input from user
         option_picked = input("Choose one option: a, b, or c: ")
+#check if user picked a
         if option_picked == 'a':
             continue
+#check if user picked b
         if option_picked == 'b':
             print("Goodbye")
             return
+#check if user picked c
         if option_picked == 'c':
             exit()
+#If user did not pick a, b, or c, print try again and restart the loop
         else:
             print("try again") 
             continue
