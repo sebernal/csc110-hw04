@@ -51,9 +51,13 @@ def check_greater():
 # Task 3
 def get_special_numbers():
     """ Add your docstring """
+#Use a for loop that checks each number between 1 and 41
     for num in range(1,41):
+#Check that the number is odd
         if num%2==1:
+#Check that the numer is a multiple of 3
             if num%3==0:
+#Check that the number is not a multiple of 5
                 if num%5!=0:
                     print(num)
 
@@ -61,12 +65,37 @@ def get_special_numbers():
 # Task 4.a
 def my_for_loop():
     """ Add your docstring """
-    pass
+    user_str = input("Give me a string: ")
+    length = len(user_str)
+    if not 2<=length<=5 or " " in user_str:
+        print("bad word")
+        return
+    else:
+        for i,ch in enumerate(user_str):
+            letter = ch   
+            if letter in "aeiou" or letter in "AEIOU":  
+                print(f"letter {letter} is a vowel")
+            else:
+                 print(f"letter {letter} is a consonant")
+
+        
+              
 
 # Task 4.b
 def my_while_loop():
     """ Add your docstring """
-    pass
+    while True :
+        option_picked = input("Choose one option: a, b, or c: ")
+        if option_picked == 'a':
+            continue
+        if option_picked == 'b':
+            print("Goodbye")
+            return
+        if option_picked == 'c':
+            exit()
+        else:
+            print("try again") 
+            continue
 
 # ---------------------------------------
 # Do not modify anything below this line
